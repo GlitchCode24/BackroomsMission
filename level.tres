@@ -1,0 +1,14 @@
+[gd_resource type="QuadMesh" load_steps=3 format=3 uid="uid://c5q28600f2scn"]
+
+[ext_resource type="Texture2D" uid="uid://byari046jkb83" path="res://images/Spark2.jpg" id="1_yjuso"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dxvsh"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(0, 0.74902, 1, 1)
+albedo_texture = ExtResource("1_yjuso")
+albedo_texture_msdf = true
+
+[resource]
+material = SubResource("StandardMaterial3D_dxvsh")
