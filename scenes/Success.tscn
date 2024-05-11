@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5lo35tec4gko"]
+[gd_scene load_steps=4 format=3 uid="uid://b5lo35tec4gko"]
 
 [ext_resource type="Script" path="res://scripts/Success.gd" id="1_u3igk"]
+[ext_resource type="Texture2D" uid="uid://xqoofakji48t" path="res://images/BlackMan.jpg" id="2_mf856"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tkyba"]
 font_size = 50
@@ -41,3 +42,13 @@ offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "You fixed the core! "
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mf856")
