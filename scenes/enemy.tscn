@@ -1,0 +1,72 @@
+[gd_scene load_steps=12 format=3 uid="uid://c4xmh7j1hlqdc"]
+
+[ext_resource type="PackedScene" uid="uid://c2wom8otjjyr1" path="res://addons/Player/3DGodotRobot.glb" id="1_lcjja"]
+[ext_resource type="Texture2D" uid="uid://7n5s8dx72a2a" path="res://addons/Player/GodotRobotPaletteSwap/GodotRedPalette.png" id="2_ma2m3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i8dsf"]
+albedo_texture = ExtResource("2_ma2m3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qu544"]
+albedo_texture = ExtResource("2_ma2m3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gout0"]
+albedo_texture = ExtResource("2_ma2m3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_phme7"]
+albedo_texture = ExtResource("2_ma2m3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5hsjy"]
+albedo_texture = ExtResource("2_ma2m3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_850gx"]
+albedo_texture = ExtResource("2_ma2m3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rr84f"]
+albedo_texture = ExtResource("2_ma2m3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ofvn"]
+albedo_texture = ExtResource("2_ma2m3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_owl2e"]
+albedo_texture = ExtResource("2_ma2m3")
+
+[node name="3DGodotRobot" instance=ExtResource("1_lcjja")]
+
+[node name="Skeleton3D" parent="RobotArmature" index="0"]
+bones/0/position = Vector3(5.82739e-10, 0.855863, 0.0298551)
+bones/0/rotation = Quaternion(0.0149092, 1.19196e-07, 1.77731e-09, 0.999889)
+bones/1/rotation = Quaternion(0.0283486, 0.270317, -0.0160412, 0.96222)
+bones/4/position = Vector3(3.86778e-09, 0.151501, -0.011741)
+bones/4/rotation = Quaternion(0.0825139, -0.272848, 0.0138666, 0.958412)
+bones/5/rotation = Quaternion(0.00821238, -4.94291e-14, -1.95798e-09, 0.999966)
+bones/9/rotation = Quaternion(-0.0399438, -0.0134618, -0.712702, 0.700199)
+bones/10/rotation = Quaternion(-0.182594, 0.718791, -0.211776, 0.636514)
+bones/11/rotation = Quaternion(0.432114, -0.0693832, 0.0653153, 0.896771)
+bones/12/rotation = Quaternion(0.0209349, 0.0170217, -0.0176714, 0.99948)
+bones/13/rotation = Quaternion(-0.624069, 0.599364, 0.346522, 0.362247)
+bones/14/rotation = Quaternion(-0.0190716, -0.742197, 0.0664385, 0.666607)
+bones/15/rotation = Quaternion(0.513456, 0.0630237, -0.0714712, 0.852809)
+bones/16/rotation = Quaternion(0.0209349, -0.0170217, 0.0176714, 0.99948)
+bones/17/rotation = Quaternion(0.750904, 0.0127384, -0.017502, 0.660057)
+bones/18/rotation = Quaternion(0.375947, 0.0104382, 0.0232825, 0.92629)
+bones/19/rotation = Quaternion(-0.443199, 0.00232173, -0.00534656, 0.896404)
+bones/21/rotation = Quaternion(0.980469, -0.0216763, 0.000552587, -0.195477)
+bones/22/rotation = Quaternion(0.509973, -0.0121661, -0.020888, 0.859851)
+bones/23/rotation = Quaternion(-0.262723, -0.00127936, 0.00570702, 0.964854)
+
+[node name="Bottom" parent="RobotArmature/Skeleton3D" index="0"]
+material_override = SubResource("StandardMaterial3D_i8dsf")
+material_overlay = SubResource("StandardMaterial3D_qu544")
+
+[node name="Chest" parent="RobotArmature/Skeleton3D" index="1"]
+material_override = SubResource("StandardMaterial3D_gout0")
+material_overlay = SubResource("StandardMaterial3D_phme7")
+surface_material_override/0 = SubResource("StandardMaterial3D_5hsjy")
+
+[node name="Face" parent="RobotArmature/Skeleton3D" index="2"]
+material_override = SubResource("StandardMaterial3D_850gx")
+material_overlay = SubResource("StandardMaterial3D_rr84f")
+
+[node name="Llimbs and head" parent="RobotArmature/Skeleton3D" index="3"]
+material_override = SubResource("StandardMaterial3D_7ofvn")
+material_overlay = SubResource("StandardMaterial3D_owl2e")

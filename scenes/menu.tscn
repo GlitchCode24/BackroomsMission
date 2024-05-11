@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=3 uid="uid://chx6cnl3mkl8e"]
+
+[ext_resource type="Texture2D" uid="uid://xqoofakji48t" path="res://images/BlackMan.jpg" id="1_0ax7c"]
+[ext_resource type="Script" path="res://scripts/Play.gd" id="2_d6psu"]
+
+[sub_resource type="SystemFont" id="SystemFont_lxf55"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fsis0"]
+font = SubResource("SystemFont_lxf55")
+font_size = 11
+font_color = Color(1, 0, 0, 1)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlackMan" type="Sprite2D" parent="."]
+position = Vector2(829, 785)
+scale = Vector2(1.78922, 1.67371)
+texture = ExtResource("1_0ax7c")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -11.0
+offset_right = -15.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.5, 2.5)
+text = "Play"
+script = ExtResource("2_d6psu")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -517.0
+offset_top = -285.0
+offset_right = -413.0
+offset_bottom = -262.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(10, 10)
+text = "Backrooms Mission"
+label_settings = SubResource("LabelSettings_fsis0")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -271.0
+offset_top = -80.0
+offset_right = 241.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Monsters escape from Backrooms because a portal has opened there. You have to fix a core and pass through the portal to close it. Take care for monsters! "
+autowrap_mode = 2
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
